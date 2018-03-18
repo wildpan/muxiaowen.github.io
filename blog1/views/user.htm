@@ -1,0 +1,27 @@
+<% include common/header.htm %>
+
+<table border="1px">
+	<h2>个人资料</h2>
+<tr>
+	<th>_id</th>
+	<th>
+    用户名
+    </th>
+    <th>
+    密码
+    </th>
+</tr>
+
+<tr>
+	<td>
+    <%=user._id%>
+    </td>
+	<td>
+    <%=user.name%>
+    </td>
+    <td>
+    <%=user.password%>
+    </td>
+</tr>
+</table>
+<% include common/footer.htm %>

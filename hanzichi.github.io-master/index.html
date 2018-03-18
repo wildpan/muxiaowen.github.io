@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>zichi's space</title>
+  <base target="_blank" />
+  <style>
+    html body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .h1 {
+      display: block;
+      font-size: 2em;
+      -webkit-margin-before: 0.67em;
+      -webkit-margin-after: 0.67em;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+      font-weight: bold;
+    }
+
+    .h3 {
+      display: block;
+      font-size: 1.17em;
+      -webkit-margin-before: 1em;
+      -webkit-margin-after: 1em;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+      font-weight: bold;
+    }
+
+    .main .cell {
+      display: inline-block;
+      margin-right: 3px;
+    }
+
+    .main .cell img {
+      height: 32px;
+      width: 32px;
+    }
+
+    .main .cell img:hover {
+      opacity: 0.5;
+    }
+
+    .wrapper {
+      /*background-color: rgba(0, 0, 0, 0.22);*/
+      /*background-image: url(images/bg2.jpg);*/
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: transparent;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      z-index: 1;
+      margin: 0 auto;
+      padding: 0;
+      padding-left: 15px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <span class="h3">This website is under construction ...</span>
+
+    <span class="h1">learn MORE about me</span>
+    <!-- <hr/> -->
+    <div class="main">
+      <div class="cell">
+        <span><a href="https://github.com/hanzichi" title="GitHub"><img src="https://github.com/favicon.ico"/></a></span>
+      </div>
+      <div class="cell">
+        <span><a href="http://www.cnblogs.com/zichi/" title="cnblogs"><img src="http://www.cnblogs.com/favicon.ico"/></a></span>
+      </div>
+      <div class="cell">
+        <span><a href="https://segmentfault.com/u/hanzichi" title="segmentfault"><img src="https://segmentfault.com/favicon.ico"/></a></span>
+      </div>
+      <div class="cell">
+        <span><a href="https://www.v2ex.com/member/hanzichi" title="v2ex"><img src="https://www.v2ex.com/static/img/icon_rayps_64.png"/></a></span>
+      </div>
+      <div class="cell">
+        <span><a href="https://leetcode.com/hanzichi/" title="leetcode"><img src="https://leetcode.com/favicon.ico"/></a></span>
+      </div>
+      <div class="cell">
+        <span><a href="http://weibo.com/5819145534/profile" title="weibo"><img src="http://weibo.com/favicon.ico"/></a></span>
+      </div>
+    </div>
+
+    <span class="h3">Contact me: <a href="mailto:hanzichi@outlook.com">hanzichi@outlook.com</a></span>
+  </div>
+  <script type="text/javascript">
+    let len = 4;
+    let index = ~~(Math.random() * len);
+    // document.querySelector('.wrapper').style.backgroundImage = `url(images/bg${index}.jpg)`;
+    document.querySelector('.wrapper').style.backgroundImage = 'url(images/bg' + index + '.jpg)';
+  </script>
+</body>
+</html>
