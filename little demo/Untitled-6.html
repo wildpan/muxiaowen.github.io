@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload=function(){
+	var tab=document.getElementById('tab1');
+	var oldcolor='';
+	
+//alert(tab.tBodies[0].rows[1].cells[1].innerHTML);
+	for(var i=0;i<tab.tBodies[0].rows.length;i++){
+		tab.tBodies[0].rows[i].onmouseover=function(){
+			oldcolor=this.style.background;
+			this.style.background='yellow';
+		}
+		tab.tBodies[0].rows[i].onmouseout=function(){
+			
+			this.style.background=oldcolor;
+		}
+		if(i%2){
+			tab.tBodies[0].rows[i].style.background='#CCC';
+		}else{
+			tab.tBodies[0].rows[i].style.background='';
+		}
+	}
+}	
+</script>
+</head>
+
+<body>
+<table id="tab1" border="1" width="500">
+	<thead>
+		<td>ID</td>
+		<td>姓名</td>
+		<td>年龄</td>
+	</thead>
+	<tbody>
+	<tr>
+		<td>1</td>
+		<td>张三</td>
+		<td>13</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>李四</td>
+		<td>12</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>王五</td>
+		<td>17</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>六六</td>
+		<td>15</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>张伟</td>
+		<td>19</td>
+	</tr>
+	</tbody>
+</table>
+</body>
+</html>

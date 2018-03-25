@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload=function(){
+ var tab=document.getElementById('tab1');
+	var txt=document.getElementById('name');
+	var btn=document.getElementById('btn1');
+	
+	btn.onclick=function(){
+	for(var i=0;i<tab.tBodies[0].rows.length;i++){	
+	var a=tab.tBodies[0].rows[i].cells[1].innerHTML.toLowerCase();
+		var b=txt.value.toLowerCase();	
+		if(a.search(b)!=-1){
+			tab.tBodies[0].rows[i].style.background='yellow';
+		}else{
+			tab.tBodies[0].rows[i].style.background='';
+		}
+		}
+	}
+};	
+</script>
+</head>
+
+<body>
+姓名：<input id="name" type="text"/>
+<input id="btn1" type="button" value="搜索"/>
+<table id="tab1" border="1" width="500">
+	<thead>
+  <td>ID</td>
+		<td>姓名</td>
+		<td>年龄</td>
+		<td>操作</td>
+	</thead>
+	<tbody>
+	<tr>
+		<td>1</td>
+		<td>张三</td>
+		<td>13</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>李四</td>
+		<td>12</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>王五</td>
+		<td>17</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Bule</td>
+		<td>15</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>张伟</td>
+		<td>19</td>
+	</tr>
+	</tbody>
+</table>
+</body>
+</html>

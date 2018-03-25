@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload=function(){
+var tab=document.getElementById('tab1');
+ var name1=document.getElementById('name');
+	var age1=document.getElementById('age');
+	var btn=document.getElementById('btn1');
+	var id=tab.tBodies[0].rows.length+1;
+	
+	btn.onclick=function(){
+		var otr=document.createElement('tr');
+		
+		var otd=document.createElement('td');
+		otd.innerHTML=id++;
+		otr.appendChild(otd);
+		
+		var otd=document.createElement('td');
+		otd.innerHTML=name1.value;
+		otr.appendChild(otd);
+		
+		var otd=document.createElement('td');
+		otd.innerHTML=age1.value;
+		otr.appendChild(otd);
+		
+		var otd=document.createElement('td');
+		otd.innerHTML='<a href="javascript:;">删除</a>';
+		otr.appendChild(otd);
+		
+		otd.getElementsByTagName('a')[0].onclick=function(){
+			tab.tBodies[0].removeChild(this.parentNode.parentNode);
+		};
+		tab.tBodies[0].appendChild(otr);
+	}
+};	
+</script>
+</head>
+
+<body>
+<input id="name" type="text"/>
+<input id="age" type="text"/>
+<input id="btn1" type="button" value="添加"/>
+<table id="tab1" border="1" width="500">
+	<thead>
+  <td>ID</td>
+		<td>姓名</td>
+		<td>年龄</td>
+		<td>操作</td>
+	</thead>
+	<tbody>
+	<tr>
+		<td>1</td>
+		<td>张三</td>
+		<td>13</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>李四</td>
+		<td>12</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>王五</td>
+		<td>17</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>六六</td>
+		<td>15</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>张伟</td>
+		<td>19</td>
+	</tr>
+	</tbody>
+</table>
+</body>
+</html>

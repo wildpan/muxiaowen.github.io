@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+* {margin: 0px;padding: 0px;}
+	#div1{width:712px;height: 108px;margin: 100px auto;position: relative;overflow: hidden;}
+	#div1 ul{position: absolute;left: 0;top: 0;}
+#div1 ul li {float: left;widows: 178px;height: 108px;list-style: none;}
+</style>
+<script>
+window.onload=function()
+{
+	var odiv=document.getElementById('div1');
+	var oul=odiv.getElementsByTagName('ul')[0];
+	var oli=oul.getElementsByTagName('li');
+	
+	var speed=-2;
+	
+	oul.innerHTML+=oul.innerHTML;
+	oul.style.width=oli[0].offsetWidth*oli.length+'px';
+function move(){
+		if(oul.offsetLeft<-oul.offsetWidth/2)
+		{
+			oul.style.left='0';
+		}
+		if(oul.offsetLeft>0)
+			{
+		oul.style.left=-oul.offsetWidth/2+'px';
+			}
+		oul.style.left=oul.offsetLeft+speed+'px';
+	}
+	var timer=setInterval(move,30);
+	odiv.onmouseover=function(){
+			clearTimeout(timer);
+		};
+	odiv.onmouseout=function(){
+		   timer=setInterval(move,30);
+		};
+	document.getElementsByTagName('a')[0].onclick=function(){
+		speed=-2;
+	};
+	document.getElementsByTagName('a')[1].onclick=function(){
+		speed=2;
+	};
+	document.getElementsByTagName('a')[0].onclick=function ()
+	{
+		speed=-2;
+	};
+	document.getElementsByTagName('a')[1].onclick=function ()
+	{
+		speed=2;
+	};
+};	
+	
+</script>
+</head>
+
+<body>
+<a href="javascript:;">向左走</a>
+<a href="javascript:;">向右走</a>
+<div id="div1">
+	<ul>
+		<li><img src="file:///D:/%E8%8B%B1%E9%9B%84%E6%97%B6%E5%88%BB/%E6%97%A0%E7%BC%9D%E6%BB%9A%E5%8A%A8%E5%9B%BE%E7%89%87/img/1.jpg" </li>
+		<li><img src="file:///D:/%E8%8B%B1%E9%9B%84%E6%97%B6%E5%88%BB/%E6%97%A0%E7%BC%9D%E6%BB%9A%E5%8A%A8%E5%9B%BE%E7%89%87/img/2.jpg" </li>
+		<li><img src="file:///D:/%E8%8B%B1%E9%9B%84%E6%97%B6%E5%88%BB/%E6%97%A0%E7%BC%9D%E6%BB%9A%E5%8A%A8%E5%9B%BE%E7%89%87/img/3.jpg" </li>
+		<li><img src="file:///D:/%E8%8B%B1%E9%9B%84%E6%97%B6%E5%88%BB/%E6%97%A0%E7%BC%9D%E6%BB%9A%E5%8A%A8%E5%9B%BE%E7%89%87/img/4.jpg" </li>
+	</ul>
+</div>
+</body>
+</html>

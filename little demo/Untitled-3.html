@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload=function(){
+	var a=document.getElementsByTagName('a');
+	
+	for(var i=0;i<a.length;i++){
+		a[i].onclick=function(){
+			this.parentNode.style.display='none';
+		}
+	}
+}	
+</script>
+</head>
+
+<body>
+<ul>
+	<li>asdasdas<a href="javascript:">隐藏</a></li>
+	<li>as2das34s<a href="javascript:">隐藏</a></li>
+	<li>aasd345as<a href="javascript:">隐藏</a></li>
+	<li>adas34567as<a href="javascript:">隐藏</a></li>
+	<li>asd345asd<a href="javascript:">隐藏</a></li>
+</ul>
+</body>
+</html>

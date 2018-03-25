@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	function todou()
+	{
+		if(n<10){
+			return '0'+n;
+		}else{
+			return ''+n;
+		}
+	}
+window.onload=function()
+{
+	var aimg=document.getElementsByTagName('img');
+	var odate=new Date();
+	var str=todou(odate.getHours())+todou(odate.getMinutes())+todou(odate.getSeconds());
+	
+	alert(str);
+}
+</script>
+</head>
+
+<body style="background: black;color: white;font-size: 50px;">
+
+</html>

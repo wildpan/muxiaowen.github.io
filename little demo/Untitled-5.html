@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload=function(){
+ var a=document.getElementById('btn');
+	var b=document.getElementById('txt');
+	var c=document.getElementById('ul1');
+	
+	a.onclick=function(){
+		var d=document.createElement('li');
+		var e=document.getElementsByTagName('li')
+		d.innerHTML=b.value;
+		//c.appendChild(d);
+		if(e.length>0){
+		c.insertBefore(d,e[0]);
+		}else{
+			c.appendChild(d);
+		}
+	}
+	
+}	
+</script>
+</head>
+
+<body>
+<input id="btn" type="button" value="创建"/>
+<input id="txt" type="text"/>
+<ul id="ul1"></ul>
+</body>
+</html>
