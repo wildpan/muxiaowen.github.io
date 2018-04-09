@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	var arr1=new Array(12,34,15,151,62);
+	var arr2=new Array(12,33,1);
+	
+	Array.prototype.sum=function(){
+	var result=0;
+		
+		for(var i=0;i<this.length;i++){
+			
+			result+=this[i];
+		}
+		return result;
+	}
+alert(arr1.sum());
+	alert(arr2.sum());
+	</script>
+</head>
+
+<body>
+</body>
+</html>

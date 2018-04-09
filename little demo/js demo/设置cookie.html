@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	function setcookie(name,value,iday){
+		var odate=new Date();
+		odate.setDate(odate.getDate()+iday);
+		document.cookie=name+'='+value+';expires='+odate;
+	
+	}
+	function getcookie(name){
+		var arr=document.cookie.split('; ');
+		for(var i=0;i<arr.length;i++){
+			var arr2=arr[i].split('=');
+			if(arr2[0]==name){
+				return arr2[1];
+			}
+		}
+		return '';
+	}
+	function removecookie(name){
+		setcookie(name,1,-1);//让他在昨天失效
+	}
+	setcookie('nsername','muxiaoen','365');
+	setcookie('password','12435435',14);
+	alert(getcookie('msername'));
+	removecookie('nsername');
+	</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	function A(){
+		this.abc=12;
+	}
+	A.prototype.show=function(){
+		alert(this.abc);
+	}
+	function B(){
+		A.call(this);
+	}
+	for(var i in A.prototype)//可以兼容各种情况
+	{
+		B.prototype[i]=A.prototype[i];
+	}
+	B.prototype.fn=function(){
+	alert('abc');
+	}
+	var obj=new B();
+	obj.show;
+	</script>
+</head>
+
+<body>
+</body>
+</html>

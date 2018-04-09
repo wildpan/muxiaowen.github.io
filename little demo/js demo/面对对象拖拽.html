@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	#div1 {width: 200px;height: 200px;background: yellow;position: absolute;}
+	#div2 {width: 200px;height: 200px;background: red;position: absolute;}
+	</style>
+<script src="drag.js">
+	</script>
+	<script src="limit.js">
+	</script>
+<script>
+	window.onload=function(){
+		new drag('div1');
+		new limitdrag('div2');
+	}
+</script>
+</head>
+
+<body>
+<div id="div1">
+	</div>
+	<div id="div2">
+	</div>
+</body>
+</html>

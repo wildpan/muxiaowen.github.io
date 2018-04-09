@@ -1,0 +1,71 @@
+html {
+	font-family:"微软雅黑","microsoft yahei",sans-serif;
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+	font-size:14px;
+}
+body {
+	margin:0;
+	line-height:1.8;
+}
+.model-list {
+	width:250px;
+	height:200px;
+	border:1px solid #ddd;
+	display:inline-block;
+	padding:10px;
+}
+.list-name {
+	}.list-price {
+	}.list-btn-cart {
+	}.list-edit {
+	display:none;
+}
+.minus {
+	width:23px;
+	height:23px;
+	display:inline-block;
+	border:1px solid #ddd;
+	text-align:center;
+	cursor:pointer;
+	background:#fff;
+}
+.num {
+	width:23px;
+	height:23px;
+	display:inline-block;
+	border:1px solid #ddd;
+	text-align:center;
+	background:#fff;
+}
+.add {
+	width:23px;
+	height:23px;
+	display:inline-block;
+	border:1px solid #ddd;
+	text-align:center;
+	cursor:pointer;
+	background:#fff;
+}
+.list-box {
+	border-bottom:1px solid #ddd;
+	padding:15px;
+}
+.display-block {
+	display:block;
+}
+.display-inline-block {
+	display:inline-block;
+}
+.fixed-width {
+	width:150px;
+	display:inline-block;
+}
+.text-right {
+	text-align:right;
+}
+.cart-list {
+	}.total-box {
+	border-bottom:1px solid #ddd;
+	padding:15px;
+}

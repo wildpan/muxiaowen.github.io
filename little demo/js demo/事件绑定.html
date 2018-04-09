@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload=function(){
+	var a=document.getElementById('btn1');
+	//事件绑定
+if(a.attachEvent)
+{
+	a.attachEvent('onclick', function(){
+		alert('a');
+	});
+	a.attachEvent('onclick', function(){
+		alert('b');
+	});
+}
+else
+{
+	a.addEventListener('click',function(){
+		alert('b');
+	},false)；
+	a.attachEvent('onclick', function(){
+		alert('a');
+	},false);
+}
+}	
+</script>
+</head>
+
+<body>
+<input id="btn1" type="button" value="anniu"/>
+</body>
+</html>

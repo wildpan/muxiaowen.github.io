@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	#div1 input{background: white;}
+	#div1 input.active{background: yellow;}
+	#div1 div{width: 200px;height: 200px;background: #CCC;display: none;}
+</style>
+<script>
+function tabs(id){
+	var _this=this;
+	var odiv=document.getElementById(id);
+	this.abtn=odiv.getElementsByTagName('input');
+	this.adiv=odiv.getElementsByTagName('div');
+	
+	for(var i=0;i<this.abtn.length;i++){
+		this.abtn[i].index=i;
+		this.abtn[i].onclick=function ()
+		{
+			 _this.fnclick(this);
+		 };
+	}
+	
+}	;
+tabs.prototype.fnclick=function(obtn){
+		for(var i=0;i<this.abtn.length;i++){
+			this.abtn[i].className='';
+			this.adiv[i].style.display='none';
+		}
+		obtn.className='active';
+		this.adiv[obtn.index].style.display='block';
+	}
+</script>
+</head>
+
+<body>
+<div id="div1">
+<input class="active" type="button" value="aaa"/>
+<input type="button" value="bbb"/>
+<input type="button" value="ccc"/>
+	<div  style="display: block">sdf121sdf</div>
+	<div>asfas57dfa</div>
+	<div>afasda456sa</div>
+	</div>
+</body>
+</html>
