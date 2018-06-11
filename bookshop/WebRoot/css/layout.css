@@ -1,0 +1,112 @@
+
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	height:100%;
+	width:100%;
+}
+#div1 {
+	height: 180px;
+	width:100%;
+	border: 1px solid #999;
+    background-image: url(../images/header.jpg);
+}	
+#div2 {
+	height: 100%; 
+	width: 300px;
+	border: 1px solid #999;
+	float: left;
+	margin-left:10px;
+	position:relative;
+}
+#div3 {
+	height: 130%;
+	border: 1px solid #999;
+	margin-left: 321px;
+}
+#div4{
+	display:none;
+	margin-left: 560px;
+	height:200px;
+	background: rgba(255,255,255,0.95);
+    position: absolute;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    opacity: .9;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+#mask{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    filter:alpha(opacity=70); /*IE滤镜，透明度50%*/
+    -moz-opacity:0.7; /*Firefox私有，透明度50%*/
+    opacity:0.7;/*其他，透明度50%*/
+    z-index:9;
+}
+/* 遮罩层 */
+
+
+/* 登录表单 */
+.login-form{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 386px;
+    height: 288px;
+    margin: -144px 0 0 -193px;
+    z-index: 10;
+    background: #fff;
+}
+.login-form .login-bd{
+    margin:30px 0 0 40px;
+}
+.login-form .close{
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;   
+    margin: 10px 10px 0 0;
+    color: #0e0e0e;
+    cursor: pointer;
+}
+.login-form h3{
+    margin:20px 0 20px 40px;
+    font-size: 18px;
+    font-weight: normal!important;
+    color:#444;
+    line-height:38px; 
+}
+.login-form input{
+    display: block;
+    width:296px;
+    height:44px;
+    font-size: 16px;
+    text-indent: 10px;
+    background-color: #fafafa;
+    border:1px solid #f1f1f1;
+    box-shadow: 0 1px 1px #e6e6e6;
+    color:#999;
+    margin:0 0 16px 40px;
+}
+.login-form .login-btn{
+    width: 296px;
+    height: 46px;
+    font-size: 16px;
+    color:#ffffff;
+    margin: 14px 0 0 40px;
+    background-color: #2ab14f;
+    border: none;
+}
